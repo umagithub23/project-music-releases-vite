@@ -1,8 +1,10 @@
-const ArtistName = ({ url, text }) => {
+const ArtistName = ({ name, url }) => {
   return (
     <div className="artistName">
       <h3>
-        <a href={url}>{text}</a>
+        <a href={url} target="_blank" rel="noreferrer">
+          {name}
+        </a>
       </h3>
     </div>
   );

@@ -5,7 +5,7 @@ import "./Album.css";
 
 const getArtistContents = (artists) => {
   const artistContents = artists.map((artist) => (
-    <ArtistName key={artist.name} text={artist.name} url={artist.url} />
+    <ArtistName key={artist.name} name={artist.name} url={artist.url} />
   ));
 
   const last = artistContents.pop();
@@ -18,7 +18,7 @@ const getArtistContents = (artists) => {
     return last;
   }
 
-  artistContents.push(<p key="and">and</p>);
+  artistContents.push(<p key="and">&</p>);
   artistContents.push(last);
 
   return artistContents;
@@ -27,9 +27,10 @@ const getArtistContents = (artists) => {
 const Album = ({ album }) => {
   return (
     <div className="album">
-      <CoverImage url={album.imageUrl} text={album.name} />
-      <AlbumName text={album.name} url={album.url} />
+      <CoverImage url={album.imageUrl} albumName={album.name} />
+      <AlbumName name={album.name} url={album.url} />
       <section className="artistWrapper">
+        <p>Artist: </p>
         {getArtistContents(album.artists)}
       </section>
     </div>

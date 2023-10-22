@@ -3,9 +3,9 @@ import { Header } from "./components/Common/Header";
 import Album from "./components/Album/Album";
 
 export const App = () => {
-  const albums = data.albums.items;
+  const albumItems = data.albums.items;
 
-  const albumsContent = albums.map((albumObj) => {
+  const albums = albumItems.map((albumObj) => {
     const album = {
       key: albumObj.id,
       name: albumObj.name,
@@ -24,7 +24,7 @@ export const App = () => {
   return (
     <div>
       <Header title="New Albums & Singles" />
-      <div className="albumOuter">{albumsContent}</div>
+      <div className="albumOuter">{albums}</div>
     </div>
   );
 };

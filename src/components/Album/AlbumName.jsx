@@ -1,8 +1,10 @@
-const AlbumName = ({ text, url }) => {
+const AlbumName = ({ name, url }) => {
   return (
     <div className="albumName">
       <h2>
-        <a href={url}>{text}</a>
+        <a href={url} target="_blank" rel="noreferrer">
+          {name}
+        </a>
       </h2>
     </div>
   );
