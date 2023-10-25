@@ -1,6 +1,7 @@
 .header {
+  color: white;
   font-family: Helvetica, sans-serif;
   font-size: 20px;
   display: flex;
-  justify-content: center;
+  margin: 10px;
 }
